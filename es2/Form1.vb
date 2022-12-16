@@ -470,6 +470,12 @@ Public Class Form1
     Private Sub keyBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles keyBox.KeyPress
         Button8.Text = "Capture Start/Stop Hotkey"
         keyBox.Enabled = False
+        If e.KeyChar = Convert.ToChar(8) Then
+            hotkeyLabel.Text = "No Key Set"
+            My.Settings.startstophotkey = Nothing
+            My.Settings.Save()
+            Exit Sub
+        End If
         hotkeyLabel.Text = e.KeyChar
         My.Settings.startstophotkey = e.KeyChar
         My.Settings.Save()

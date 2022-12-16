@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.hotkeyLabel = New System.Windows.Forms.Label()
@@ -85,6 +86,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.keyBox = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,6 +103,7 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.Label17)
         Me.TabPage2.Controls.Add(Me.hotkeyLabel)
         Me.TabPage2.Controls.Add(Me.Button8)
         Me.TabPage2.Controls.Add(Me.Label16)
@@ -113,7 +116,7 @@ Partial Class Form1
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(491, 415)
+        Me.TabPage2.Size = New System.Drawing.Size(532, 440)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Settings"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -131,7 +134,7 @@ Partial Class Form1
         Me.Button8.Location = New System.Drawing.Point(279, 29)
         Me.Button8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(143, 19)
+        Me.Button8.Size = New System.Drawing.Size(143, 32)
         Me.Button8.TabIndex = 8
         Me.Button8.Text = "Capture Start/Stop Hotkey"
         Me.Button8.UseVisualStyleBackColor = True
@@ -149,9 +152,9 @@ Partial Class Form1
         '
         Me.Button5.BackColor = System.Drawing.Color.Tan
         Me.Button5.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Button5.Location = New System.Drawing.Point(336, 261)
+        Me.Button5.Location = New System.Drawing.Point(421, 317)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(105, 44)
+        Me.Button5.Size = New System.Drawing.Size(105, 71)
         Me.Button5.TabIndex = 6
         Me.Button5.Text = "Open Outputs"
         Me.Button5.UseVisualStyleBackColor = False
@@ -197,9 +200,9 @@ Partial Class Form1
         '
         Me.Button3.BackColor = System.Drawing.Color.IndianRed
         Me.Button3.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Button3.Location = New System.Drawing.Point(336, 310)
+        Me.Button3.Location = New System.Drawing.Point(406, 394)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(105, 29)
+        Me.Button3.Size = New System.Drawing.Size(120, 40)
         Me.Button3.TabIndex = 0
         Me.Button3.Text = "Exit Program"
         Me.Button3.UseVisualStyleBackColor = False
@@ -251,14 +254,14 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(491, 415)
+        Me.TabPage1.Size = New System.Drawing.Size(532, 440)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Scoreboard"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(116, 328)
+        Me.Label15.Location = New System.Drawing.Point(115, 340)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(33, 13)
         Me.Label15.TabIndex = 62
@@ -267,7 +270,7 @@ Partial Class Form1
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(71, 328)
+        Me.Label14.Location = New System.Drawing.Point(70, 340)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(35, 13)
         Me.Label14.TabIndex = 61
@@ -275,7 +278,7 @@ Partial Class Form1
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(116, 343)
+        Me.Button7.Location = New System.Drawing.Point(115, 355)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(29, 20)
         Me.Button7.TabIndex = 60
@@ -283,7 +286,7 @@ Partial Class Form1
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(74, 343)
+        Me.Button6.Location = New System.Drawing.Point(73, 355)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(29, 20)
         Me.Button6.TabIndex = 59
@@ -292,7 +295,7 @@ Partial Class Form1
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(29, 347)
+        Me.Label12.Location = New System.Drawing.Point(28, 359)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(40, 13)
         Me.Label12.TabIndex = 58
@@ -301,7 +304,7 @@ Partial Class Form1
         'varDown2
         '
         Me.varDown2.Font = New System.Drawing.Font("Courier New", 18.0!)
-        Me.varDown2.Location = New System.Drawing.Point(290, 303)
+        Me.varDown2.Location = New System.Drawing.Point(307, 312)
         Me.varDown2.Name = "varDown2"
         Me.varDown2.Size = New System.Drawing.Size(28, 29)
         Me.varDown2.TabIndex = 57
@@ -311,7 +314,7 @@ Partial Class Form1
         'varUp2
         '
         Me.varUp2.Font = New System.Drawing.Font("Courier New", 18.0!)
-        Me.varUp2.Location = New System.Drawing.Point(289, 237)
+        Me.varUp2.Location = New System.Drawing.Point(306, 246)
         Me.varUp2.Name = "varUp2"
         Me.varUp2.Size = New System.Drawing.Size(28, 29)
         Me.varUp2.TabIndex = 56
@@ -322,7 +325,7 @@ Partial Class Form1
         '
         Me.varTwo.AutoSize = True
         Me.varTwo.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold)
-        Me.varTwo.Location = New System.Drawing.Point(290, 268)
+        Me.varTwo.Location = New System.Drawing.Point(307, 277)
         Me.varTwo.Name = "varTwo"
         Me.varTwo.Size = New System.Drawing.Size(33, 37)
         Me.varTwo.TabIndex = 55
@@ -331,7 +334,7 @@ Partial Class Form1
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(250, 277)
+        Me.Label13.Location = New System.Drawing.Point(267, 286)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(38, 13)
         Me.Label13.TabIndex = 54
@@ -339,7 +342,7 @@ Partial Class Form1
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(404, 289)
+        Me.Button4.Location = New System.Drawing.Point(421, 298)
         Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(70, 19)
@@ -349,7 +352,7 @@ Partial Class Form1
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(404, 268)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(421, 277)
         Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(70, 20)
@@ -358,7 +361,7 @@ Partial Class Form1
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(404, 252)
+        Me.Label11.Location = New System.Drawing.Point(421, 261)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(44, 13)
         Me.Label11.TabIndex = 51
@@ -367,7 +370,7 @@ Partial Class Form1
         'varDown
         '
         Me.varDown.Font = New System.Drawing.Font("Courier New", 18.0!)
-        Me.varDown.Location = New System.Drawing.Point(351, 303)
+        Me.varDown.Location = New System.Drawing.Point(368, 312)
         Me.varDown.Name = "varDown"
         Me.varDown.Size = New System.Drawing.Size(28, 29)
         Me.varDown.TabIndex = 50
@@ -377,7 +380,7 @@ Partial Class Form1
         'varUp
         '
         Me.varUp.Font = New System.Drawing.Font("Courier New", 18.0!)
-        Me.varUp.Location = New System.Drawing.Point(351, 237)
+        Me.varUp.Location = New System.Drawing.Point(368, 246)
         Me.varUp.Name = "varUp"
         Me.varUp.Size = New System.Drawing.Size(28, 29)
         Me.varUp.TabIndex = 49
@@ -388,7 +391,7 @@ Partial Class Form1
         '
         Me.varOne.AutoSize = True
         Me.varOne.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold)
-        Me.varOne.Location = New System.Drawing.Point(351, 268)
+        Me.varOne.Location = New System.Drawing.Point(368, 277)
         Me.varOne.Name = "varOne"
         Me.varOne.Size = New System.Drawing.Size(33, 37)
         Me.varOne.TabIndex = 48
@@ -397,7 +400,7 @@ Partial Class Form1
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(320, 277)
+        Me.Label10.Location = New System.Drawing.Point(337, 286)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(32, 13)
         Me.Label10.TabIndex = 47
@@ -451,7 +454,7 @@ Partial Class Form1
         Me.timeControl.Name = "timeControl"
         Me.timeControl.RowCount = 1
         Me.timeControl.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.timeControl.Size = New System.Drawing.Size(141, 29)
+        Me.timeControl.Size = New System.Drawing.Size(141, 43)
         Me.timeControl.TabIndex = 42
         '
         'timeSec
@@ -475,9 +478,9 @@ Partial Class Form1
         'resetTimer
         '
         Me.resetTimer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.resetTimer.Location = New System.Drawing.Point(277, 184)
+        Me.resetTimer.Location = New System.Drawing.Point(261, 197)
         Me.resetTimer.Name = "resetTimer"
-        Me.resetTimer.Size = New System.Drawing.Size(89, 28)
+        Me.resetTimer.Size = New System.Drawing.Size(117, 28)
         Me.resetTimer.TabIndex = 41
         Me.resetTimer.Text = "Reset Timer"
         Me.resetTimer.UseVisualStyleBackColor = False
@@ -486,9 +489,9 @@ Partial Class Form1
         '
         Me.timerControl.BackColor = System.Drawing.Color.Green
         Me.timerControl.Font = New System.Drawing.Font("Segoe UI", 25.0!)
-        Me.timerControl.Location = New System.Drawing.Point(277, 121)
+        Me.timerControl.Location = New System.Drawing.Point(261, 136)
         Me.timerControl.Name = "timerControl"
-        Me.timerControl.Size = New System.Drawing.Size(89, 58)
+        Me.timerControl.Size = New System.Drawing.Size(117, 58)
         Me.timerControl.TabIndex = 40
         Me.timerControl.Text = "Start"
         Me.timerControl.UseVisualStyleBackColor = False
@@ -505,7 +508,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(71, 300)
+        Me.Button2.Location = New System.Drawing.Point(70, 312)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(81, 20)
         Me.Button2.TabIndex = 38
@@ -529,7 +532,7 @@ Partial Class Form1
         Me.tlPeriods.Name = "tlPeriods"
         Me.tlPeriods.RowCount = 1
         Me.tlPeriods.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlPeriods.Size = New System.Drawing.Size(180, 20)
+        Me.tlPeriods.Size = New System.Drawing.Size(180, 29)
         Me.tlPeriods.TabIndex = 37
         '
         'RadioButton5
@@ -538,7 +541,7 @@ Partial Class Form1
         Me.RadioButton5.Location = New System.Drawing.Point(147, 3)
         Me.RadioButton5.Name = "RadioButton5"
         Me.RadioButton5.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.RadioButton5.Size = New System.Drawing.Size(30, 14)
+        Me.RadioButton5.Size = New System.Drawing.Size(30, 17)
         Me.RadioButton5.TabIndex = 45
         Me.RadioButton5.TabStop = True
         Me.RadioButton5.Text = "5"
@@ -550,7 +553,7 @@ Partial Class Form1
         Me.RadioButton4.Location = New System.Drawing.Point(111, 3)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.RadioButton4.Size = New System.Drawing.Size(30, 14)
+        Me.RadioButton4.Size = New System.Drawing.Size(30, 17)
         Me.RadioButton4.TabIndex = 3
         Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "4"
@@ -561,7 +564,7 @@ Partial Class Form1
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Location = New System.Drawing.Point(75, 3)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(30, 14)
+        Me.RadioButton3.Size = New System.Drawing.Size(30, 17)
         Me.RadioButton3.TabIndex = 2
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "3"
@@ -572,7 +575,7 @@ Partial Class Form1
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Location = New System.Drawing.Point(39, 3)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(30, 14)
+        Me.RadioButton2.Size = New System.Drawing.Size(30, 17)
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "2"
@@ -583,7 +586,7 @@ Partial Class Form1
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Location = New System.Drawing.Point(3, 3)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(30, 14)
+        Me.RadioButton1.Size = New System.Drawing.Size(30, 17)
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "1"
@@ -688,7 +691,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(3, 59)
+        Me.Label3.Location = New System.Drawing.Point(0, 59)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(68, 13)
         Me.Label3.TabIndex = 26
@@ -735,7 +738,7 @@ Partial Class Form1
         Me.TabControl1.Multiline = True
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(499, 444)
+        Me.TabControl1.Size = New System.Drawing.Size(540, 469)
         Me.TabControl1.TabIndex = 0
         '
         'keyBox
@@ -746,15 +749,25 @@ Partial Class Form1
         Me.keyBox.Size = New System.Drawing.Size(24, 20)
         Me.keyBox.TabIndex = 1
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(279, 63)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(179, 13)
+        Me.Label17.TabIndex = 10
+        Me.Label17.Text = "Press ""Backspace"" to delete hotkey"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(501, 443)
+        Me.ClientSize = New System.Drawing.Size(543, 471)
         Me.Controls.Add(Me.keyBox)
         Me.Controls.Add(Me.TabControl1)
         Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(859, 867)
         Me.MinimumSize = New System.Drawing.Size(489, 424)
@@ -837,4 +850,5 @@ Partial Class Form1
     Friend WithEvents Button8 As Button
     Friend WithEvents Label16 As Label
     Friend WithEvents keyBox As TextBox
+    Friend WithEvents Label17 As Label
 End Class
