@@ -26,6 +26,8 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.hotkeyLabel = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -87,8 +89,6 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.keyBox = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -125,13 +125,31 @@ Partial Class Form1
         Me.TabPage2.Text = "Settings"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(380, 112)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox2.TabIndex = 8
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(276, 112)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(98, 13)
+        Me.Label18.TabIndex = 7
+        Me.Label18.Text = "OBS Set Up Mode:"
+        '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(279, 63)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(179, 13)
-        Me.Label17.TabIndex = 10
+        Me.Label17.TabIndex = 6
         Me.Label17.Text = "Press ""Backspace"" to delete hotkey"
         '
         'hotkeyLabel
@@ -148,7 +166,7 @@ Partial Class Form1
         Me.Button8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(143, 32)
-        Me.Button8.TabIndex = 8
+        Me.Button8.TabIndex = 5
         Me.Button8.Text = "Capture Start/Stop Hotkey"
         Me.Button8.UseVisualStyleBackColor = True
         '
@@ -158,7 +176,7 @@ Partial Class Form1
         Me.Label16.Location = New System.Drawing.Point(279, 14)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(96, 13)
-        Me.Label16.TabIndex = 7
+        Me.Label16.TabIndex = 4
         Me.Label16.Text = "Start/Stop Hotkey:"
         '
         'Button5
@@ -168,7 +186,7 @@ Partial Class Form1
         Me.Button5.Location = New System.Drawing.Point(421, 317)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(105, 71)
-        Me.Button5.TabIndex = 6
+        Me.Button5.TabIndex = 9
         Me.Button5.Text = "Open Outputs"
         Me.Button5.UseVisualStyleBackColor = False
         '
@@ -178,7 +196,7 @@ Partial Class Form1
         Me.CheckBox1.Location = New System.Drawing.Point(84, 48)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 5
+        Me.CheckBox1.TabIndex = 3
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'Label7
@@ -187,7 +205,7 @@ Partial Class Form1
         Me.Label7.Location = New System.Drawing.Point(14, 48)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(55, 13)
-        Me.Label7.TabIndex = 4
+        Me.Label7.TabIndex = 2
         Me.Label7.Text = "Count Up:"
         '
         'settingPeriod
@@ -197,7 +215,7 @@ Partial Class Form1
         Me.settingPeriod.Location = New System.Drawing.Point(84, 14)
         Me.settingPeriod.Name = "settingPeriod"
         Me.settingPeriod.Size = New System.Drawing.Size(82, 21)
-        Me.settingPeriod.TabIndex = 2
+        Me.settingPeriod.TabIndex = 1
         '
         'Label6
         '
@@ -206,7 +224,7 @@ Partial Class Form1
         Me.Label6.Location = New System.Drawing.Point(33, 14)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(35, 13)
-        Me.Label6.TabIndex = 1
+        Me.Label6.TabIndex = 0
         Me.Label6.Text = "Sport:"
         '
         'Button3
@@ -216,7 +234,7 @@ Partial Class Form1
         Me.Button3.Location = New System.Drawing.Point(406, 394)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(120, 40)
-        Me.Button3.TabIndex = 0
+        Me.Button3.TabIndex = 10
         Me.Button3.Text = "Exit Program"
         Me.Button3.UseVisualStyleBackColor = False
         '
@@ -320,7 +338,7 @@ Partial Class Form1
         Me.varDown2.Location = New System.Drawing.Point(307, 312)
         Me.varDown2.Name = "varDown2"
         Me.varDown2.Size = New System.Drawing.Size(28, 29)
-        Me.varDown2.TabIndex = 57
+        Me.varDown2.TabIndex = 27
         Me.varDown2.Text = "▼"
         Me.varDown2.UseVisualStyleBackColor = True
         '
@@ -330,7 +348,7 @@ Partial Class Form1
         Me.varUp2.Location = New System.Drawing.Point(306, 246)
         Me.varUp2.Name = "varUp2"
         Me.varUp2.Size = New System.Drawing.Size(28, 29)
-        Me.varUp2.TabIndex = 56
+        Me.varUp2.TabIndex = 23
         Me.varUp2.Text = "▲"
         Me.varUp2.UseVisualStyleBackColor = True
         '
@@ -341,7 +359,7 @@ Partial Class Form1
         Me.varTwo.Location = New System.Drawing.Point(307, 277)
         Me.varTwo.Name = "varTwo"
         Me.varTwo.Size = New System.Drawing.Size(33, 37)
-        Me.varTwo.TabIndex = 55
+        Me.varTwo.TabIndex = 25
         Me.varTwo.Text = "0"
         '
         'Label13
@@ -350,7 +368,7 @@ Partial Class Form1
         Me.Label13.Location = New System.Drawing.Point(267, 286)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(38, 13)
-        Me.Label13.TabIndex = 54
+        Me.Label13.TabIndex = 22
         Me.Label13.Text = "Down:"
         '
         'Button4
@@ -359,7 +377,7 @@ Partial Class Form1
         Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(70, 19)
-        Me.Button4.TabIndex = 53
+        Me.Button4.TabIndex = 30
         Me.Button4.Text = "Foul"
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -369,7 +387,7 @@ Partial Class Form1
         Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(70, 20)
-        Me.NumericUpDown1.TabIndex = 52
+        Me.NumericUpDown1.TabIndex = 29
         '
         'Label11
         '
@@ -386,7 +404,7 @@ Partial Class Form1
         Me.varDown.Location = New System.Drawing.Point(368, 312)
         Me.varDown.Name = "varDown"
         Me.varDown.Size = New System.Drawing.Size(28, 29)
-        Me.varDown.TabIndex = 50
+        Me.varDown.TabIndex = 28
         Me.varDown.Text = "▼"
         Me.varDown.UseVisualStyleBackColor = True
         '
@@ -396,7 +414,7 @@ Partial Class Form1
         Me.varUp.Location = New System.Drawing.Point(368, 246)
         Me.varUp.Name = "varUp"
         Me.varUp.Size = New System.Drawing.Size(28, 29)
-        Me.varUp.TabIndex = 49
+        Me.varUp.TabIndex = 24
         Me.varUp.Text = "▲"
         Me.varUp.UseVisualStyleBackColor = True
         '
@@ -407,7 +425,7 @@ Partial Class Form1
         Me.varOne.Location = New System.Drawing.Point(368, 277)
         Me.varOne.Name = "varOne"
         Me.varOne.Size = New System.Drawing.Size(33, 37)
-        Me.varOne.TabIndex = 48
+        Me.varOne.TabIndex = 26
         Me.varOne.Text = "0"
         '
         'Label10
@@ -435,7 +453,7 @@ Partial Class Form1
         Me.Label8.Location = New System.Drawing.Point(20, 9)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(69, 23)
-        Me.Label8.TabIndex = 45
+        Me.Label8.TabIndex = 0
         Me.Label8.Text = "Sport:"
         '
         'countModeAlert
@@ -452,7 +470,7 @@ Partial Class Form1
         Me.resetTeamNames.Location = New System.Drawing.Point(129, 121)
         Me.resetTeamNames.Name = "resetTeamNames"
         Me.resetTeamNames.Size = New System.Drawing.Size(81, 21)
-        Me.resetTeamNames.TabIndex = 43
+        Me.resetTeamNames.TabIndex = 7
         Me.resetTeamNames.Text = "Reset Teams"
         Me.resetTeamNames.UseVisualStyleBackColor = True
         '
@@ -494,7 +512,7 @@ Partial Class Form1
         Me.resetTimer.Location = New System.Drawing.Point(261, 197)
         Me.resetTimer.Name = "resetTimer"
         Me.resetTimer.Size = New System.Drawing.Size(117, 28)
-        Me.resetTimer.TabIndex = 41
+        Me.resetTimer.TabIndex = 21
         Me.resetTimer.Text = "Reset Timer"
         Me.resetTimer.UseVisualStyleBackColor = False
         '
@@ -505,7 +523,7 @@ Partial Class Form1
         Me.timerControl.Location = New System.Drawing.Point(261, 136)
         Me.timerControl.Name = "timerControl"
         Me.timerControl.Size = New System.Drawing.Size(117, 58)
-        Me.timerControl.TabIndex = 40
+        Me.timerControl.TabIndex = 20
         Me.timerControl.Text = "Start"
         Me.timerControl.UseVisualStyleBackColor = False
         '
@@ -516,7 +534,7 @@ Partial Class Form1
         Me.timeDisplay.Location = New System.Drawing.Point(218, 15)
         Me.timeDisplay.Name = "timeDisplay"
         Me.timeDisplay.Size = New System.Drawing.Size(228, 81)
-        Me.timeDisplay.TabIndex = 39
+        Me.timeDisplay.TabIndex = 19
         Me.timeDisplay.Text = "0 : 00"
         '
         'Button2
@@ -524,7 +542,7 @@ Partial Class Form1
         Me.Button2.Location = New System.Drawing.Point(70, 312)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(81, 20)
-        Me.Button2.TabIndex = 38
+        Me.Button2.TabIndex = 18
         Me.Button2.Text = "Reset Period"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -546,7 +564,7 @@ Partial Class Form1
         Me.tlPeriods.RowCount = 1
         Me.tlPeriods.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlPeriods.Size = New System.Drawing.Size(180, 29)
-        Me.tlPeriods.TabIndex = 37
+        Me.tlPeriods.TabIndex = 17
         '
         'RadioButton5
         '
@@ -610,7 +628,7 @@ Partial Class Form1
         Me.Label5.Location = New System.Drawing.Point(18, 277)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(48, 17)
-        Me.Label5.TabIndex = 36
+        Me.Label5.TabIndex = 16
         Me.Label5.Text = "Period:"
         '
         'Button1
@@ -619,7 +637,7 @@ Partial Class Form1
         Me.Button1.Location = New System.Drawing.Point(176, 192)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(56, 39)
-        Me.Button1.TabIndex = 35
+        Me.Button1.TabIndex = 15
         Me.Button1.Text = "Reset Scores"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -628,7 +646,7 @@ Partial Class Form1
         Me.updateTeamName.Location = New System.Drawing.Point(44, 121)
         Me.updateTeamName.Name = "updateTeamName"
         Me.updateTeamName.Size = New System.Drawing.Size(81, 21)
-        Me.updateTeamName.TabIndex = 34
+        Me.updateTeamName.TabIndex = 6
         Me.updateTeamName.Text = "Update Teams"
         Me.updateTeamName.UseVisualStyleBackColor = True
         '
@@ -638,7 +656,7 @@ Partial Class Form1
         Me.awayDown.Location = New System.Drawing.Point(144, 231)
         Me.awayDown.Name = "awayDown"
         Me.awayDown.Size = New System.Drawing.Size(28, 29)
-        Me.awayDown.TabIndex = 33
+        Me.awayDown.TabIndex = 14
         Me.awayDown.Text = "▼"
         Me.awayDown.UseVisualStyleBackColor = True
         '
@@ -648,7 +666,7 @@ Partial Class Form1
         Me.homeDown.Location = New System.Drawing.Point(71, 231)
         Me.homeDown.Name = "homeDown"
         Me.homeDown.Size = New System.Drawing.Size(28, 29)
-        Me.homeDown.TabIndex = 32
+        Me.homeDown.TabIndex = 13
         Me.homeDown.Text = "▼"
         Me.homeDown.UseVisualStyleBackColor = True
         '
@@ -658,7 +676,7 @@ Partial Class Form1
         Me.awayUp.Location = New System.Drawing.Point(142, 165)
         Me.awayUp.Name = "awayUp"
         Me.awayUp.Size = New System.Drawing.Size(28, 29)
-        Me.awayUp.TabIndex = 31
+        Me.awayUp.TabIndex = 10
         Me.awayUp.Text = "▲"
         Me.awayUp.UseVisualStyleBackColor = True
         '
@@ -668,7 +686,7 @@ Partial Class Form1
         Me.homeUp.Location = New System.Drawing.Point(71, 165)
         Me.homeUp.Name = "homeUp"
         Me.homeUp.Size = New System.Drawing.Size(28, 29)
-        Me.homeUp.TabIndex = 30
+        Me.homeUp.TabIndex = 9
         Me.homeUp.Text = "▲"
         Me.homeUp.UseVisualStyleBackColor = True
         '
@@ -679,7 +697,7 @@ Partial Class Form1
         Me.awayScore.Location = New System.Drawing.Point(142, 196)
         Me.awayScore.Name = "awayScore"
         Me.awayScore.Size = New System.Drawing.Size(33, 37)
-        Me.awayScore.TabIndex = 29
+        Me.awayScore.TabIndex = 12
         Me.awayScore.Text = "0"
         '
         'homeScore
@@ -689,7 +707,7 @@ Partial Class Form1
         Me.homeScore.Location = New System.Drawing.Point(71, 196)
         Me.homeScore.Name = "homeScore"
         Me.homeScore.Size = New System.Drawing.Size(33, 37)
-        Me.homeScore.TabIndex = 28
+        Me.homeScore.TabIndex = 11
         Me.homeScore.Text = "0"
         '
         'Label4
@@ -698,7 +716,7 @@ Partial Class Form1
         Me.Label4.Location = New System.Drawing.Point(6, 196)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(68, 13)
-        Me.Label4.TabIndex = 27
+        Me.Label4.TabIndex = 8
         Me.Label4.Text = "Team Score:"
         '
         'Label3
@@ -707,7 +725,7 @@ Partial Class Form1
         Me.Label3.Location = New System.Drawing.Point(0, 59)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(68, 13)
-        Me.Label3.TabIndex = 26
+        Me.Label3.TabIndex = 1
         Me.Label3.Text = "Team Name:"
         '
         'awayName
@@ -715,14 +733,14 @@ Partial Class Form1
         Me.awayName.Location = New System.Drawing.Point(70, 96)
         Me.awayName.Name = "awayName"
         Me.awayName.Size = New System.Drawing.Size(86, 20)
-        Me.awayName.TabIndex = 25
+        Me.awayName.TabIndex = 5
         '
         'homeName
         '
         Me.homeName.Location = New System.Drawing.Point(71, 56)
         Me.homeName.Name = "homeName"
         Me.homeName.Size = New System.Drawing.Size(86, 20)
-        Me.homeName.TabIndex = 24
+        Me.homeName.TabIndex = 3
         '
         'Label2
         '
@@ -730,7 +748,7 @@ Partial Class Form1
         Me.Label2.Location = New System.Drawing.Point(96, 81)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 13)
-        Me.Label2.TabIndex = 23
+        Me.Label2.TabIndex = 4
         Me.Label2.Text = "Away Team:"
         '
         'Label1
@@ -739,7 +757,7 @@ Partial Class Form1
         Me.Label1.Location = New System.Drawing.Point(93, 41)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(68, 13)
-        Me.Label1.TabIndex = 22
+        Me.Label1.TabIndex = 2
         Me.Label1.Text = "Home Team:"
         '
         'TabControl1
@@ -761,24 +779,6 @@ Partial Class Form1
         Me.keyBox.Name = "keyBox"
         Me.keyBox.Size = New System.Drawing.Size(24, 20)
         Me.keyBox.TabIndex = 1
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(276, 112)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(98, 13)
-        Me.Label18.TabIndex = 11
-        Me.Label18.Text = "OBS Set Up Mode:"
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(380, 112)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox2.TabIndex = 12
-        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'Form1
         '
