@@ -42,6 +42,9 @@ Public Class Form1
         If My.Settings.countMode = True Then
             CheckBox1.Checked = True
         End If
+        If My.Settings.obsSetup = True Then
+            CheckBox2.Checked = True
+        End If
         hotkeyLabel.Text = My.Settings.startstophotkey
         Me.KeyPreview = True
         Call setSport()
@@ -489,19 +492,21 @@ Public Class Form1
     End Sub
 
     Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
-        If CheckBox1.Checked Then
-            Dim obsmode As System.IO.StreamWriter
+        If CheckBox2.Checked Then
             For Each item As String In textFiles
+                Dim obsmode As System.IO.StreamWriter
                 obsmode = My.Computer.FileSystem.OpenTextFileWriter(loc + "/Outputs/" & item & ".txt", False)
                 obsmode.Write(item)
                 obsmode.Close()
+                My.Settings.obsSetup = True
             Next
         Else
-            Dim obsmode As System.IO.StreamWriter
             For Each item As String In textFiles
+                Dim obsmode As System.IO.StreamWriter
                 obsmode = My.Computer.FileSystem.OpenTextFileWriter(loc + "/Outputs/" & item & ".txt", False)
-                obsmode.Write("B")
+                obsmode.Write("")
                 obsmode.Close()
+                My.Settings.obsSetup = False
             Next
         End If
     End Sub

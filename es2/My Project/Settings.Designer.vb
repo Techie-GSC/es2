@@ -88,6 +88,18 @@ Namespace My
                 Me("startstophotkey") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property obsSetup() As Boolean
+            Get
+                Return CType(Me("obsSetup"),Boolean)
+            End Get
+            Set
+                Me("obsSetup") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -11,5 +11,8 @@
     <Setting Name="startstophotkey" Type="System.Char" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="obsSetup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
