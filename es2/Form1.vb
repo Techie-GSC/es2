@@ -39,6 +39,7 @@ Public Class Form1
             away = My.Computer.FileSystem.ReadAllText(loc + "\Outputs\Away.txt")
             awayName.Text = away
         End If
+
         If My.Settings.countMode = True Then
             CheckBox1.Checked = True
         End If
@@ -46,7 +47,9 @@ Public Class Form1
             CheckBox2.Checked = True
         End If
         hotkeyLabel.Text = My.Settings.startstophotkey
+        'allows the form1_keyPress subprocess to listen for keypresses, even if the main form does not have focus
         Me.KeyPreview = True
+        'call the subprocess to set the current sport, while the form loads
         Call setSport()
     End Sub
 
@@ -107,56 +110,18 @@ Public Class Form1
         scores2.Write(awayScore.Text.ToString)
         scores2.Close()
     End Sub
-    Private Sub varUp_Click(sender As Object, e As EventArgs) Handles varUp.Click
-        If varOne.Text >= 99 Then
-            varOne.Text = 99
-            MsgBox("Score cannot exceed 99!", Title:="Error")
-            Return
-        End If
-        varOne.Text += 1
+    Private Sub downSet_Click(sender As Object, e As EventArgs) Handles downSet.Click
         Dim var1 As System.IO.StreamWriter
         var1 = My.Computer.FileSystem.OpenTextFileWriter(loc + "/Outputs/variable.txt", False)
-        var1.Write(varOne.Text.ToString)
+        var1.Write(downUD.Value.ToString)
         var1.Close()
     End Sub
 
-    Private Sub varDown_Click(sender As Object, e As EventArgs) Handles varDown.Click
-        If varOne.Text < 1 Then
-            varOne.Text = 0
-            MsgBox("Score cannot go below 0!", Title:="Error")
-            Return
-        End If
-        varOne.Text -= 1
-        Dim var2 As System.IO.StreamWriter
-        var2 = My.Computer.FileSystem.OpenTextFileWriter(loc + "/Outputs/variable.txt", False)
-        var2.Write(varOne.Text.ToString)
-        var2.Close()
-    End Sub
-
-    Private Sub varUp2_Click(sender As Object, e As EventArgs) Handles varUp2.Click
-        If varTwo.Text >= 99 Then
-            varTwo.Text = 99
-            MsgBox("Score cannot exceed 99!", Title:="Error")
-            Return
-        End If
-        varTwo.Text += 1
+    Private Sub ytgSet_Click(sender As Object, e As EventArgs) Handles ytgSet.Click
         Dim var1 As System.IO.StreamWriter
         var1 = My.Computer.FileSystem.OpenTextFileWriter(loc + "/Outputs/variable2.txt", False)
-        var1.Write(varTwo.Text.ToString)
+        var1.Write(ytgUD.Value.ToString)
         var1.Close()
-    End Sub
-
-    Private Sub varDown2_Click(sender As Object, e As EventArgs) Handles varDown2.Click
-        If varTwo.Text < 1 Then
-            varTwo.Text = 0
-            MsgBox("Score cannot go below 0!", Title:="Error")
-            Return
-        End If
-        varTwo.Text -= 1
-        Dim var2 As System.IO.StreamWriter
-        var2 = My.Computer.FileSystem.OpenTextFileWriter(loc + "/Outputs/variable2.txt", False)
-        var2.Write(varTwo.Text.ToString)
-        var2.Close()
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         homeScore.Text = 0
@@ -389,22 +354,18 @@ Public Class Form1
 
         'football
         If My.Settings.gameType = 0 Then
-            varUp.Visible = True
-            varDown.Visible = True
-            varOne.Visible = True
+            downUD.Visible = True
+            ytgUD.Visible = True
+            downSet.Visible = True
+            ytgSet.Visible = True
             Label10.Visible = True
-            varUp2.Visible = True
-            varDown2.Visible = True
-            varTwo.Visible = True
             Label13.Visible = True
         Else
-            varUp.Visible = False
-            varDown.Visible = False
-            varOne.Visible = False
+            downUD.Visible = False
+            ytgUD.Visible = False
+            downSet.Visible = False
+            ytgSet.Visible = False
             Label10.Visible = False
-            varUp2.Visible = False
-            varDown2.Visible = False
-            varTwo.Visible = False
             Label13.Visible = False
         End If
 

@@ -44,16 +44,10 @@ Partial Class Form1
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.varDown2 = New System.Windows.Forms.Button()
-        Me.varUp2 = New System.Windows.Forms.Button()
-        Me.varTwo = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.varDown = New System.Windows.Forms.Button()
-        Me.varUp = New System.Windows.Forms.Button()
-        Me.varOne = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -89,6 +83,10 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.keyBox = New System.Windows.Forms.TextBox()
+        Me.downUD = New System.Windows.Forms.NumericUpDown()
+        Me.ytgUD = New System.Windows.Forms.NumericUpDown()
+        Me.downSet = New System.Windows.Forms.Button()
+        Me.ytgSet = New System.Windows.Forms.Button()
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,6 +95,8 @@ Partial Class Form1
         CType(Me.timeMin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tlPeriods.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        CType(Me.downUD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ytgUD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -241,21 +241,19 @@ Partial Class Form1
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage1.Controls.Add(Me.ytgSet)
+        Me.TabPage1.Controls.Add(Me.downSet)
+        Me.TabPage1.Controls.Add(Me.ytgUD)
+        Me.TabPage1.Controls.Add(Me.downUD)
         Me.TabPage1.Controls.Add(Me.Label15)
         Me.TabPage1.Controls.Add(Me.Label14)
         Me.TabPage1.Controls.Add(Me.Button7)
         Me.TabPage1.Controls.Add(Me.Button6)
         Me.TabPage1.Controls.Add(Me.Label12)
-        Me.TabPage1.Controls.Add(Me.varDown2)
-        Me.TabPage1.Controls.Add(Me.varUp2)
-        Me.TabPage1.Controls.Add(Me.varTwo)
         Me.TabPage1.Controls.Add(Me.Label13)
         Me.TabPage1.Controls.Add(Me.Button4)
         Me.TabPage1.Controls.Add(Me.NumericUpDown1)
         Me.TabPage1.Controls.Add(Me.Label11)
-        Me.TabPage1.Controls.Add(Me.varDown)
-        Me.TabPage1.Controls.Add(Me.varUp)
-        Me.TabPage1.Controls.Add(Me.varOne)
         Me.TabPage1.Controls.Add(Me.Label10)
         Me.TabPage1.Controls.Add(Me.Label9)
         Me.TabPage1.Controls.Add(Me.Label8)
@@ -332,40 +330,10 @@ Partial Class Form1
         Me.Label12.TabIndex = 58
         Me.Label12.Text = "Bonus:"
         '
-        'varDown2
-        '
-        Me.varDown2.Font = New System.Drawing.Font("Courier New", 18.0!)
-        Me.varDown2.Location = New System.Drawing.Point(307, 312)
-        Me.varDown2.Name = "varDown2"
-        Me.varDown2.Size = New System.Drawing.Size(28, 29)
-        Me.varDown2.TabIndex = 27
-        Me.varDown2.Text = "▼"
-        Me.varDown2.UseVisualStyleBackColor = True
-        '
-        'varUp2
-        '
-        Me.varUp2.Font = New System.Drawing.Font("Courier New", 18.0!)
-        Me.varUp2.Location = New System.Drawing.Point(306, 246)
-        Me.varUp2.Name = "varUp2"
-        Me.varUp2.Size = New System.Drawing.Size(28, 29)
-        Me.varUp2.TabIndex = 23
-        Me.varUp2.Text = "▲"
-        Me.varUp2.UseVisualStyleBackColor = True
-        '
-        'varTwo
-        '
-        Me.varTwo.AutoSize = True
-        Me.varTwo.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold)
-        Me.varTwo.Location = New System.Drawing.Point(307, 277)
-        Me.varTwo.Name = "varTwo"
-        Me.varTwo.Size = New System.Drawing.Size(33, 37)
-        Me.varTwo.TabIndex = 25
-        Me.varTwo.Text = "0"
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(267, 286)
+        Me.Label13.Location = New System.Drawing.Point(282, 261)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(38, 13)
         Me.Label13.TabIndex = 22
@@ -373,7 +341,7 @@ Partial Class Form1
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(421, 298)
+        Me.Button4.Location = New System.Drawing.Point(436, 295)
         Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(70, 19)
@@ -383,7 +351,7 @@ Partial Class Form1
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(421, 277)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(436, 274)
         Me.NumericUpDown1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(70, 20)
@@ -392,46 +360,16 @@ Partial Class Form1
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(421, 261)
+        Me.Label11.Location = New System.Drawing.Point(436, 258)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(44, 13)
         Me.Label11.TabIndex = 51
         Me.Label11.Text = "Foul by:"
         '
-        'varDown
-        '
-        Me.varDown.Font = New System.Drawing.Font("Courier New", 18.0!)
-        Me.varDown.Location = New System.Drawing.Point(368, 312)
-        Me.varDown.Name = "varDown"
-        Me.varDown.Size = New System.Drawing.Size(28, 29)
-        Me.varDown.TabIndex = 28
-        Me.varDown.Text = "▼"
-        Me.varDown.UseVisualStyleBackColor = True
-        '
-        'varUp
-        '
-        Me.varUp.Font = New System.Drawing.Font("Courier New", 18.0!)
-        Me.varUp.Location = New System.Drawing.Point(368, 246)
-        Me.varUp.Name = "varUp"
-        Me.varUp.Size = New System.Drawing.Size(28, 29)
-        Me.varUp.TabIndex = 24
-        Me.varUp.Text = "▲"
-        Me.varUp.UseVisualStyleBackColor = True
-        '
-        'varOne
-        '
-        Me.varOne.AutoSize = True
-        Me.varOne.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold)
-        Me.varOne.Location = New System.Drawing.Point(368, 277)
-        Me.varOne.Name = "varOne"
-        Me.varOne.Size = New System.Drawing.Size(33, 37)
-        Me.varOne.TabIndex = 26
-        Me.varOne.Text = "0"
-        '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(337, 286)
+        Me.Label10.Location = New System.Drawing.Point(288, 284)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(32, 13)
         Me.Label10.TabIndex = 47
@@ -634,7 +572,7 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Button1.Location = New System.Drawing.Point(176, 192)
+        Me.Button1.Location = New System.Drawing.Point(192, 194)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(56, 39)
         Me.Button1.TabIndex = 15
@@ -780,6 +718,43 @@ Partial Class Form1
         Me.keyBox.Size = New System.Drawing.Size(24, 20)
         Me.keyBox.TabIndex = 1
         '
+        'downUD
+        '
+        Me.downUD.Location = New System.Drawing.Point(326, 259)
+        Me.downUD.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.downUD.Maximum = New Decimal(New Integer() {4, 0, 0, 0})
+        Me.downUD.Name = "downUD"
+        Me.downUD.Size = New System.Drawing.Size(43, 20)
+        Me.downUD.TabIndex = 63
+        '
+        'ytgUD
+        '
+        Me.ytgUD.Location = New System.Drawing.Point(326, 286)
+        Me.ytgUD.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ytgUD.Name = "ytgUD"
+        Me.ytgUD.Size = New System.Drawing.Size(43, 20)
+        Me.ytgUD.TabIndex = 64
+        '
+        'downSet
+        '
+        Me.downSet.Location = New System.Drawing.Point(375, 261)
+        Me.downSet.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.downSet.Name = "downSet"
+        Me.downSet.Size = New System.Drawing.Size(43, 19)
+        Me.downSet.TabIndex = 65
+        Me.downSet.Text = "Set"
+        Me.downSet.UseVisualStyleBackColor = True
+        '
+        'ytgSet
+        '
+        Me.ytgSet.Location = New System.Drawing.Point(375, 287)
+        Me.ytgSet.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ytgSet.Name = "ytgSet"
+        Me.ytgSet.Size = New System.Drawing.Size(43, 19)
+        Me.ytgSet.TabIndex = 66
+        Me.ytgSet.Text = "Set"
+        Me.ytgSet.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -806,6 +781,8 @@ Partial Class Form1
         Me.tlPeriods.ResumeLayout(False)
         Me.tlPeriods.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        CType(Me.downUD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ytgUD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -819,16 +796,10 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents varDown2 As Button
-    Friend WithEvents varUp2 As Button
-    Friend WithEvents varTwo As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Button4 As Button
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents Label11 As Label
-    Friend WithEvents varDown As Button
-    Friend WithEvents varUp As Button
-    Friend WithEvents varOne As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
@@ -875,4 +846,8 @@ Partial Class Form1
     Friend WithEvents Label17 As Label
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents Label18 As Label
+    Friend WithEvents ytgSet As Button
+    Friend WithEvents downSet As Button
+    Friend WithEvents ytgUD As NumericUpDown
+    Friend WithEvents downUD As NumericUpDown
 End Class
