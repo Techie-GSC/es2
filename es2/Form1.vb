@@ -4,26 +4,33 @@ Imports System.Security.Cryptography.X509Certificates
 Imports System.Net
 Imports System.IO
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
+Imports System.Windows
 
 Public Class Form1
 
     Public loc As String = My.Computer.FileSystem.CurrentDirectory
     Public playerFoul As New ArrayList
+    Public textFiles = {"time", "period", "HomeScore", "Home", "AwayScore", "Away", "variable",
+        "variable2", "fouls", "homeBonus", "awayBonus"}
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim otp As String = loc + "\Outputs"
         If System.IO.Directory.Exists(otp) = False Then
             System.IO.Directory.CreateDirectory(loc + "\Outputs")
-            File.Create(loc + "\Outputs\time.txt").Dispose()
-            File.Create(loc + "\Outputs\period.txt").Dispose()
-            File.Create(loc + "\Outputs\HomeScore.txt").Dispose()
-            File.Create(loc + "\Outputs\Home.txt").Dispose()
-            File.Create(loc + "\Outputs\AwayScore.txt").Dispose()
-            File.Create(loc + "\Outputs\Away.txt").Dispose()
-            File.Create(loc + "\Outputs\variable.txt").Dispose()
-            File.Create(loc + "\Outputs\variable2.txt").Dispose()
-            File.Create(loc + "\Outputs\fouls.txt").Dispose()
-            File.Create(loc + "\Outputs\homeBonus.txt").Dispose()
-            File.Create(loc + "\Outputs\awayBonus.txt").Dispose()
+            For Each item As String In textFiles
+                File.Create(loc + "\Outputs\" & item & ".txt").Dispose()
+            Next
+
+            'File.Create(loc + "\Outputs\time.txt").Dispose()
+            'File.Create(loc + "\Outputs\period.txt").Dispose()
+            'File.Create(loc + "\Outputs\HomeScore.txt").Dispose()
+            'File.Create(loc + "\Outputs\Home.txt").Dispose()
+            'File.Create(loc + "\Outputs\AwayScore.txt").Dispose()
+            'File.Create(loc + "\Outputs\Away.txt").Dispose()
+            'File.Create(loc + "\Outputs\variable.txt").Dispose()
+            'File.Create(loc + "\Outputs\variable2.txt").Dispose()
+            'File.Create(loc + "\Outputs\fouls.txt").Dispose()
+            'File.Create(loc + "\Outputs\homeBonus.txt").Dispose()
+            'File.Create(loc + "\Outputs\awayBonus.txt").Dispose()
         ElseIf System.IO.Directory.Exists(otp) = True Then
             Dim home As String
             home = My.Computer.FileSystem.ReadAllText(loc + "\Outputs\Home.txt")
@@ -479,5 +486,23 @@ Public Class Form1
         hotkeyLabel.Text = e.KeyChar
         My.Settings.startstophotkey = e.KeyChar
         My.Settings.Save()
+    End Sub
+
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
+        If CheckBox1.Checked Then
+            Dim obsmode As System.IO.StreamWriter
+            For Each item As String In textFiles
+                obsmode = My.Computer.FileSystem.OpenTextFileWriter(loc + "/Outputs/" & item & ".txt", False)
+                obsmode.Write(item)
+                obsmode.Close()
+            Next
+        Else
+            Dim obsmode As System.IO.StreamWriter
+            For Each item As String In textFiles
+                obsmode = My.Computer.FileSystem.OpenTextFileWriter(loc + "/Outputs/" & item & ".txt", False)
+                obsmode.Write("B")
+                obsmode.Close()
+            Next
+        End If
     End Sub
 End Class

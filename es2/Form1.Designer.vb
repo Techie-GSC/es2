@@ -26,6 +26,7 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.hotkeyLabel = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -86,7 +87,8 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.keyBox = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,6 +105,8 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.CheckBox2)
+        Me.TabPage2.Controls.Add(Me.Label18)
         Me.TabPage2.Controls.Add(Me.Label17)
         Me.TabPage2.Controls.Add(Me.hotkeyLabel)
         Me.TabPage2.Controls.Add(Me.Button8)
@@ -120,6 +124,15 @@ Partial Class Form1
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Settings"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(279, 63)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(179, 13)
+        Me.Label17.TabIndex = 10
+        Me.Label17.Text = "Press ""Backspace"" to delete hotkey"
         '
         'hotkeyLabel
         '
@@ -749,14 +762,23 @@ Partial Class Form1
         Me.keyBox.Size = New System.Drawing.Size(24, 20)
         Me.keyBox.TabIndex = 1
         '
-        'Label17
+        'Label18
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(279, 63)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(179, 13)
-        Me.Label17.TabIndex = 10
-        Me.Label17.Text = "Press ""Backspace"" to delete hotkey"
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(276, 112)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(98, 13)
+        Me.Label18.TabIndex = 11
+        Me.Label18.Text = "OBS Set Up Mode:"
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(380, 112)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox2.TabIndex = 12
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -851,4 +873,6 @@ Partial Class Form1
     Friend WithEvents Label16 As Label
     Friend WithEvents keyBox As TextBox
     Friend WithEvents Label17 As Label
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Label18 As Label
 End Class
