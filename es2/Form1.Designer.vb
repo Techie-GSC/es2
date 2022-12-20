@@ -30,7 +30,7 @@ Partial Class Form1
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.hotkeyLabel = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.captureHotkeyButton = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -39,13 +39,17 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ytgSet = New System.Windows.Forms.Button()
+        Me.downSet = New System.Windows.Forms.Button()
+        Me.ytgUD = New System.Windows.Forms.NumericUpDown()
+        Me.downUD = New System.Windows.Forms.NumericUpDown()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.awayBonus = New System.Windows.Forms.Button()
+        Me.homeBonus = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.foulSet = New System.Windows.Forms.Button()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -59,7 +63,7 @@ Partial Class Form1
         Me.resetTimer = New System.Windows.Forms.Button()
         Me.timerControl = New System.Windows.Forms.Button()
         Me.timeDisplay = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.resetPeriod = New System.Windows.Forms.Button()
         Me.tlPeriods = New System.Windows.Forms.TableLayoutPanel()
         Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
@@ -83,20 +87,16 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.keyBox = New System.Windows.Forms.TextBox()
-        Me.downUD = New System.Windows.Forms.NumericUpDown()
-        Me.ytgUD = New System.Windows.Forms.NumericUpDown()
-        Me.downSet = New System.Windows.Forms.Button()
-        Me.ytgSet = New System.Windows.Forms.Button()
         Me.TabPage2.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.ytgUD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.downUD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.timeControl.SuspendLayout()
         CType(Me.timeSec, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.timeMin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tlPeriods.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        CType(Me.downUD, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ytgUD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -109,7 +109,7 @@ Partial Class Form1
         Me.TabPage2.Controls.Add(Me.Label18)
         Me.TabPage2.Controls.Add(Me.Label17)
         Me.TabPage2.Controls.Add(Me.hotkeyLabel)
-        Me.TabPage2.Controls.Add(Me.Button8)
+        Me.TabPage2.Controls.Add(Me.captureHotkeyButton)
         Me.TabPage2.Controls.Add(Me.Label16)
         Me.TabPage2.Controls.Add(Me.Button5)
         Me.TabPage2.Controls.Add(Me.CheckBox1)
@@ -160,15 +160,15 @@ Partial Class Form1
         Me.hotkeyLabel.Size = New System.Drawing.Size(0, 13)
         Me.hotkeyLabel.TabIndex = 9
         '
-        'Button8
+        'captureHotkeyButton
         '
-        Me.Button8.Location = New System.Drawing.Point(279, 29)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(143, 32)
-        Me.Button8.TabIndex = 5
-        Me.Button8.Text = "Capture Start/Stop Hotkey"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.captureHotkeyButton.Location = New System.Drawing.Point(279, 29)
+        Me.captureHotkeyButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.captureHotkeyButton.Name = "captureHotkeyButton"
+        Me.captureHotkeyButton.Size = New System.Drawing.Size(143, 32)
+        Me.captureHotkeyButton.TabIndex = 5
+        Me.captureHotkeyButton.Text = "Capture Start/Stop Hotkey"
+        Me.captureHotkeyButton.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -247,11 +247,11 @@ Partial Class Form1
         Me.TabPage1.Controls.Add(Me.downUD)
         Me.TabPage1.Controls.Add(Me.Label15)
         Me.TabPage1.Controls.Add(Me.Label14)
-        Me.TabPage1.Controls.Add(Me.Button7)
-        Me.TabPage1.Controls.Add(Me.Button6)
+        Me.TabPage1.Controls.Add(Me.awayBonus)
+        Me.TabPage1.Controls.Add(Me.homeBonus)
         Me.TabPage1.Controls.Add(Me.Label12)
         Me.TabPage1.Controls.Add(Me.Label13)
-        Me.TabPage1.Controls.Add(Me.Button4)
+        Me.TabPage1.Controls.Add(Me.foulSet)
         Me.TabPage1.Controls.Add(Me.NumericUpDown1)
         Me.TabPage1.Controls.Add(Me.Label11)
         Me.TabPage1.Controls.Add(Me.Label10)
@@ -263,7 +263,7 @@ Partial Class Form1
         Me.TabPage1.Controls.Add(Me.resetTimer)
         Me.TabPage1.Controls.Add(Me.timerControl)
         Me.TabPage1.Controls.Add(Me.timeDisplay)
-        Me.TabPage1.Controls.Add(Me.Button2)
+        Me.TabPage1.Controls.Add(Me.resetPeriod)
         Me.TabPage1.Controls.Add(Me.tlPeriods)
         Me.TabPage1.Controls.Add(Me.Label5)
         Me.TabPage1.Controls.Add(Me.Button1)
@@ -287,6 +287,43 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Scoreboard"
         '
+        'ytgSet
+        '
+        Me.ytgSet.Location = New System.Drawing.Point(375, 287)
+        Me.ytgSet.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ytgSet.Name = "ytgSet"
+        Me.ytgSet.Size = New System.Drawing.Size(43, 19)
+        Me.ytgSet.TabIndex = 66
+        Me.ytgSet.Text = "Set"
+        Me.ytgSet.UseVisualStyleBackColor = True
+        '
+        'downSet
+        '
+        Me.downSet.Location = New System.Drawing.Point(375, 261)
+        Me.downSet.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.downSet.Name = "downSet"
+        Me.downSet.Size = New System.Drawing.Size(43, 19)
+        Me.downSet.TabIndex = 65
+        Me.downSet.Text = "Set"
+        Me.downSet.UseVisualStyleBackColor = True
+        '
+        'ytgUD
+        '
+        Me.ytgUD.Location = New System.Drawing.Point(326, 286)
+        Me.ytgUD.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ytgUD.Name = "ytgUD"
+        Me.ytgUD.Size = New System.Drawing.Size(43, 20)
+        Me.ytgUD.TabIndex = 64
+        '
+        'downUD
+        '
+        Me.downUD.Location = New System.Drawing.Point(326, 259)
+        Me.downUD.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.downUD.Maximum = New Decimal(New Integer() {4, 0, 0, 0})
+        Me.downUD.Name = "downUD"
+        Me.downUD.Size = New System.Drawing.Size(43, 20)
+        Me.downUD.TabIndex = 63
+        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -305,21 +342,21 @@ Partial Class Form1
         Me.Label14.TabIndex = 61
         Me.Label14.Text = "Home"
         '
-        'Button7
+        'awayBonus
         '
-        Me.Button7.Location = New System.Drawing.Point(115, 355)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(29, 20)
-        Me.Button7.TabIndex = 60
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.awayBonus.Location = New System.Drawing.Point(115, 355)
+        Me.awayBonus.Name = "awayBonus"
+        Me.awayBonus.Size = New System.Drawing.Size(29, 20)
+        Me.awayBonus.TabIndex = 60
+        Me.awayBonus.UseVisualStyleBackColor = True
         '
-        'Button6
+        'homeBonus
         '
-        Me.Button6.Location = New System.Drawing.Point(73, 355)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(29, 20)
-        Me.Button6.TabIndex = 59
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.homeBonus.Location = New System.Drawing.Point(73, 355)
+        Me.homeBonus.Name = "homeBonus"
+        Me.homeBonus.Size = New System.Drawing.Size(29, 20)
+        Me.homeBonus.TabIndex = 59
+        Me.homeBonus.UseVisualStyleBackColor = True
         '
         'Label12
         '
@@ -339,15 +376,15 @@ Partial Class Form1
         Me.Label13.TabIndex = 22
         Me.Label13.Text = "Down:"
         '
-        'Button4
+        'foulSet
         '
-        Me.Button4.Location = New System.Drawing.Point(436, 295)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(70, 19)
-        Me.Button4.TabIndex = 30
-        Me.Button4.Text = "Foul"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.foulSet.Location = New System.Drawing.Point(436, 295)
+        Me.foulSet.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.foulSet.Name = "foulSet"
+        Me.foulSet.Size = New System.Drawing.Size(70, 19)
+        Me.foulSet.TabIndex = 30
+        Me.foulSet.Text = "Foul"
+        Me.foulSet.UseVisualStyleBackColor = True
         '
         'NumericUpDown1
         '
@@ -475,14 +512,14 @@ Partial Class Form1
         Me.timeDisplay.TabIndex = 19
         Me.timeDisplay.Text = "0 : 00"
         '
-        'Button2
+        'resetPeriod
         '
-        Me.Button2.Location = New System.Drawing.Point(70, 312)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(81, 20)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "Reset Period"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.resetPeriod.Location = New System.Drawing.Point(70, 312)
+        Me.resetPeriod.Name = "resetPeriod"
+        Me.resetPeriod.Size = New System.Drawing.Size(81, 20)
+        Me.resetPeriod.TabIndex = 18
+        Me.resetPeriod.Text = "Reset Period"
+        Me.resetPeriod.UseVisualStyleBackColor = True
         '
         'tlPeriods
         '
@@ -718,47 +755,11 @@ Partial Class Form1
         Me.keyBox.Size = New System.Drawing.Size(24, 20)
         Me.keyBox.TabIndex = 1
         '
-        'downUD
-        '
-        Me.downUD.Location = New System.Drawing.Point(326, 259)
-        Me.downUD.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.downUD.Maximum = New Decimal(New Integer() {4, 0, 0, 0})
-        Me.downUD.Name = "downUD"
-        Me.downUD.Size = New System.Drawing.Size(43, 20)
-        Me.downUD.TabIndex = 63
-        '
-        'ytgUD
-        '
-        Me.ytgUD.Location = New System.Drawing.Point(326, 286)
-        Me.ytgUD.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ytgUD.Name = "ytgUD"
-        Me.ytgUD.Size = New System.Drawing.Size(43, 20)
-        Me.ytgUD.TabIndex = 64
-        '
-        'downSet
-        '
-        Me.downSet.Location = New System.Drawing.Point(375, 261)
-        Me.downSet.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.downSet.Name = "downSet"
-        Me.downSet.Size = New System.Drawing.Size(43, 19)
-        Me.downSet.TabIndex = 65
-        Me.downSet.Text = "Set"
-        Me.downSet.UseVisualStyleBackColor = True
-        '
-        'ytgSet
-        '
-        Me.ytgSet.Location = New System.Drawing.Point(375, 287)
-        Me.ytgSet.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ytgSet.Name = "ytgSet"
-        Me.ytgSet.Size = New System.Drawing.Size(43, 19)
-        Me.ytgSet.TabIndex = 66
-        Me.ytgSet.Text = "Set"
-        Me.ytgSet.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(543, 471)
         Me.Controls.Add(Me.keyBox)
         Me.Controls.Add(Me.TabControl1)
@@ -774,6 +775,8 @@ Partial Class Form1
         Me.TabPage2.PerformLayout()
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.ytgUD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.downUD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.timeControl.ResumeLayout(False)
         CType(Me.timeSec, System.ComponentModel.ISupportInitialize).EndInit()
@@ -781,8 +784,6 @@ Partial Class Form1
         Me.tlPeriods.ResumeLayout(False)
         Me.tlPeriods.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
-        CType(Me.downUD, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ytgUD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -797,7 +798,7 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents Label13 As Label
-    Friend WithEvents Button4 As Button
+    Friend WithEvents foulSet As Button
     Friend WithEvents NumericUpDown1 As NumericUpDown
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
@@ -811,7 +812,7 @@ Partial Class Form1
     Friend WithEvents resetTimer As Button
     Friend WithEvents timerControl As Button
     Friend WithEvents timeDisplay As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents resetPeriod As Button
     Friend WithEvents tlPeriods As TableLayoutPanel
     Friend WithEvents RadioButton5 As RadioButton
     Friend WithEvents RadioButton4 As RadioButton
@@ -836,11 +837,11 @@ Partial Class Form1
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents Label15 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents awayBonus As Button
+    Friend WithEvents homeBonus As Button
     Friend WithEvents Label12 As Label
     Friend WithEvents hotkeyLabel As Label
-    Friend WithEvents Button8 As Button
+    Friend WithEvents captureHotkeyButton As Button
     Friend WithEvents Label16 As Label
     Friend WithEvents keyBox As TextBox
     Friend WithEvents Label17 As Label
@@ -850,4 +851,5 @@ Partial Class Form1
     Friend WithEvents downSet As Button
     Friend WithEvents ytgUD As NumericUpDown
     Friend WithEvents downUD As NumericUpDown
+    Friend WithEvents XuiSwitch1 As XanderUI.XUISwitch
 End Class
